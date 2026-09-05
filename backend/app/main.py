@@ -1,7 +1,5 @@
 from fastapi import FastAPI
+from app.routes.root import router
 
 app = FastAPI()
-
-@app.get("/")
-def root():
-    return {"message": "Finance Intelligence API is running"}
+app.include_router(router)
