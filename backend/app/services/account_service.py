@@ -26,7 +26,7 @@ def get_account(db: Session, account_id: int):
     return account
 
 def get_accounts(db: Session):
-    accounts = db.query(Account).all()
+    accounts = db.query(Account).filter(Account.is_active == True).all()
     return accounts
 
 def update_account(db: Session, account_id: int, account_data: AccountUpdate):
