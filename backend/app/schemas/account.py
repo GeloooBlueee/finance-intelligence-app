@@ -10,6 +10,7 @@ class AccountResponse(BaseModel):
     name: str
     type: str
     initial_balance: Decimal
+    current_balance: Decimal
     is_active: bool
     created_at: datetime
 
